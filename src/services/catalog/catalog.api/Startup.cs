@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Reflection;
+using catalog.app.Queries.GetAllCatalogItems;
+using catalog.data;
+using MediatR;
+using MediatR.Pipeline;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
-namespace saaz.api.catalog
+namespace catalog.api
 {
     public class Startup
     {
@@ -25,6 +25,18 @@ namespace saaz.api.catalog
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add MediatR
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPreProcessorBehavior<,>));
+            services.AddMediatR(typeof(GetAllCatalogItemsQueryHandler).GetTypeInfo().Assembly);
+
+            // Add DbContext using SQL Server Provider
+            services.AddDbContext<CatalogDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("saazDB")));
+
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1", new Info { Title = "saaz-catalog api", Version = "v1" });
+            });
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -34,6 +46,7 @@ namespace saaz.api.catalog
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
             }
             else
             {
@@ -42,6 +55,12 @@ namespace saaz.api.catalog
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "saaz-catalog api v1");
+            });
+
             app.UseMvc();
         }
     }
