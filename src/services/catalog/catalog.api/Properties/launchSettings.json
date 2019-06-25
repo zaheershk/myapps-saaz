@@ -19,7 +19,7 @@
         "ASPNETCORE_HOSTINGSTARTUP__KEYVAULT__CONFIGURATIONVAULT": "https://z-vault.vault.azure.net"
       }
     },
-    "catalog.api": {
+    "saaz.Catalog.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

@@ -13,7 +13,7 @@ using Microsoft.Extensions.Options;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
-namespace gateway.api
+namespace saaz.Gateway.Api
 {
     public class Startup
     {

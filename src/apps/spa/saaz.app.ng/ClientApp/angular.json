@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "saaz.app.ng": {
+    "saaz.App.Ng": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -52,18 +52,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "saaz.app.ng:build"
+            "browserTarget": "saaz.App.Ng:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "saaz.app.ng:build:production"
+              "browserTarget": "saaz.App.Ng:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "saaz.app.ng:build"
+            "browserTarget": "saaz.App.Ng:build"
           }
         },
         "test": {
@@ -122,7 +122,7 @@
         }
       }
     },
-    "saaz.app.ng-e2e": {
+    "saaz.App.Ng-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -130,7 +130,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "saaz.app.ng:serve"
+            "devServerTarget": "saaz.App.Ng:serve"
           }
         },
         "lint": {
@@ -145,5 +145,5 @@
       }
     }
   },
-  "defaultProject": "saaz.app.ng"
+  "defaultProject": "saaz.App.Ng"
 }

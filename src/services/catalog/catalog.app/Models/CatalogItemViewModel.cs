@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace catalog.app.Models
+namespace saaz.Catalog.App.Models
 {
     public class CatalogItemViewModel
     {

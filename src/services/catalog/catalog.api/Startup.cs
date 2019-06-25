@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
-using catalog.app.Queries.GetAllCatalogItems;
-using catalog.data;
+using saaz.Catalog.App.Queries.GetAllCatalogItems;
+using saaz.Catalog.Data;
 using MediatR;
 using MediatR.Pipeline;
 using Microsoft.AspNetCore.Builder;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace catalog.api
+namespace saaz.Catalog.Api
 {
     public class Startup
     {

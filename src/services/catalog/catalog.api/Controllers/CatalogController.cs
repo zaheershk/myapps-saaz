@@ -1,12 +1,12 @@
 ﻿using System.Threading.Tasks;
-using catalog.app.Models;
-using catalog.app.Queries.GetAllCatalogItems;
+using saaz.Catalog.App.Models;
+using saaz.Catalog.App.Queries.GetAllCatalogItems;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace catalog.api.Controllers
+namespace saaz.Catalog.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

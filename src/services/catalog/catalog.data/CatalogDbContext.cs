@@ -1,10 +1,10 @@
-﻿using catalog.domain.Entities;
+﻿using saaz.Catalog.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace catalog.data
+namespace saaz.Catalog.Data
 {
     public class CatalogDbContext : DbContext
     {

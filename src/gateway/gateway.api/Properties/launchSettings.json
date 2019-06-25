@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "gateway.api": {
+    "saaz.Gateway.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace saaz.app.razor
+namespace saaz.App.Razor
 {
     public class Program
     {

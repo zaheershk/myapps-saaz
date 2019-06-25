@@ -3,10 +3,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MediatR;
-using catalog.app.Models;
-using catalog.data;
+using saaz.Catalog.App.Models;
+using saaz.Catalog.Data;
 
-namespace catalog.app.Queries.GetAllCatalogItems
+namespace saaz.Catalog.App.Queries.GetAllCatalogItems
 {
     public class GetAllCatalogItemsQueryHandler : IRequestHandler<GetAllCatalogItemsQuery, CatalogItemListViewModel>
     {

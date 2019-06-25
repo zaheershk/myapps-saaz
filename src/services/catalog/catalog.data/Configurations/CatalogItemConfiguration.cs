@@ -1,8 +1,8 @@
-﻿using catalog.domain.Entities;
+﻿using saaz.Catalog.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace catalog.data.Configurations
+namespace saaz.Catalog.Data.Configurations
 {
     public class CatalogItemConfiguration : IEntityTypeConfiguration<CatalogItem>
     {

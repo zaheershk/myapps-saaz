@@ -1,11 +1,11 @@
 {
-  "name": "saaz.app.ng",
+  "name": "saaz.App.Ng",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ssr": "ng run saaz.app.ng:server:dev",
+    "build:ssr": "ng run saaz.App.Ng:server:dev",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

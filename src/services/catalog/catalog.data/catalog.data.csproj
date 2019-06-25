@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>catalog.data</AssemblyName>
+    <RootNamespace>saaz.Catalog.Data</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace catalog.domain.Entities
+namespace saaz.Catalog.Domain.Entities
 {
     public class CatalogCategory : CatalogBase
     {

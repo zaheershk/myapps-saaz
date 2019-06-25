@@ -12,7 +12,7 @@ using Microsoft.Extensions.Configuration.AzureKeyVault;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.ApplicationInsights;
 
-namespace catalog.api
+namespace saaz.Catalog.Api
 {
     public class Program
     {
