@@ -31,23 +31,23 @@ namespace saaz.Catalog.Data.Configurations
             //fk settings
             builder.HasOne(ct => ct.Type)
                 .WithMany(ci => ci.CatalogItems)
-                .HasForeignKey(fk => fk.TypeId)
-                .HasConstraintName("FK_CI_TYPEID");
+                .HasForeignKey(fk => fk.TypeId);
+            //.HasConstraintName("FK_CI_TYPEID");
 
             builder.HasOne(cb => cb.Brand)
                 .WithMany(ci => ci.CatalogItems)
-                .HasForeignKey(fk => fk.BrandId)
-                .HasConstraintName("FK_CI_BRANDID");
+                .HasForeignKey(fk => fk.BrandId);
+            //.HasConstraintName("FK_CI_BRANDID");
 
             builder.HasOne(cc => cc.Category)
                 .WithMany(ci => ci.CatalogItems)
-                .HasForeignKey(fk => fk.CategoryId)
-                .HasConstraintName("FK_CI_CATEGORYID");
+                .HasForeignKey(fk => fk.CategoryId);
+            //.HasConstraintName("FK_CI_CATEGORYID");
 
             builder.HasOne(csc => csc.SubCategory)
                 .WithMany(ci => ci.CatalogItems)
-                .HasForeignKey(fk => fk.SubCategoryId)
-                .HasConstraintName("FK_CI_SUBCATEGORYID");
+                .HasForeignKey(fk => fk.SubCategoryId);
+            //.HasConstraintName("FK_CI_SUBCATEGORYID");
         }
     }
 }

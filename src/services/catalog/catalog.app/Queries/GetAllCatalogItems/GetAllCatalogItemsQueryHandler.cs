@@ -19,7 +19,7 @@ namespace saaz.Catalog.App.Queries.GetAllCatalogItems
 
         public async Task<CatalogItemListViewModel> Handle(GetAllCatalogItemsQuery request, CancellationToken cancellationToken)
         {
-            var catalogItems = await _context.CatalogItem.OrderBy(p => p.ItemName).ToListAsync(cancellationToken);
+            var catalogItems = await _context.CatalogItems.OrderBy(p => p.ItemName).ToListAsync(cancellationToken);
 
             return new CatalogItemListViewModel
             {

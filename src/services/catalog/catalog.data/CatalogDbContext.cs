@@ -13,11 +13,15 @@ namespace saaz.Catalog.Data
         {
         }
 
-        public DbSet<CatalogItem> CatalogItem { get; set; }
+        public DbSet<CatalogBrand> CatalogBrands { get; set; }
+        public DbSet<CatalogType> CatalogTypes { get; set; }
+        public DbSet<CatalogCategory> CatalogCategories { get; set; }
+        public DbSet<CatalogSubCategory> CatalogSubCategories { get; set; }
+        public DbSet<CatalogItem> CatalogItems { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder mb)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CatalogDbContext).Assembly);
+            mb.ApplyConfigurationsFromAssembly(typeof(CatalogDbContext).Assembly);
         }
     }
 }

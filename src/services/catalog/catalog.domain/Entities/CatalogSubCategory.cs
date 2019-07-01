@@ -14,6 +14,8 @@ namespace saaz.Catalog.Domain.Entities
         public int CategoryId { get; set; } //refers Id field in CatalogCategory model
         public string SubCategoryName { get; set; }
 
+        public CatalogCategory Category { get; set; }
+
         //fk-fields
         public ICollection<CatalogItem> CatalogItems { get; private set; }
     }
