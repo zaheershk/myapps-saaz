@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <RootNamespace>saaz.Core.App</RootNamespace>
+    <AssemblyName>saaz.core.app</AssemblyName>
   </PropertyGroup>
 
 </Project>
